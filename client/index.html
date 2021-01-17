@@ -9,13 +9,19 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
 	<title>JRG Consulting</title>
 </head>
 <body>
 	<div id="app">
 		<header>
-			<nav>
-				<router-link to='/'>Accueil</router-link>
+			<nav class="navbar">
+					<router-link to='/' class="nav-item link-logo"><img src="./assets/img/logo.png" alt="logo"></router-link>
+					<h1 class="nav-item name">Jean-Roch Guillemin</h1>
+					<div class="nav-item link-block">
+						<router-link to='/Contact' class="link">Contact</router-link>
+						<router-link to='/' class="link">Accueil</router-link>
+					</div>
 			</nav>
 		</header>
 		<main>
