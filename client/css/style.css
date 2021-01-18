@@ -3,12 +3,14 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #fafafa;
   color: #093145;
+  font-size: 17px;
 }
 
 #app {
   width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .navbar {
@@ -83,7 +85,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 66%;
+  width: 75%;
   gap: 20px;
 }
 
@@ -102,7 +104,7 @@ body {
   font-size: x-large;
 }
 
-.home .home-container {
+.home .jrg-container {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -111,42 +113,199 @@ body {
   justify-items: center;
   -ms-grid-columns: 1fr 2.5fr;
       grid-template-columns: 1fr 2.5fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   gap: 30px 40px;
-      grid-template-areas: ". ." ". ." ". ." ". .";
+      grid-template-areas: ". .";
+  padding-bottom: 20px;
+  border-bottom: 2px dotted #093145;
+}
+
+.home .jrg-container :nth-child(odd) {
+  max-width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .jrg-container :nth-child(even) {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  position: relative;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .jrg-container :nth-child(even)::before {
+  content: "";
+  position: absolute;
+  background-color: #093145;
+  width: 2px;
+  height: 100%;
+  bottom: 0;
+  left: -20px;
+}
+
+.home .home-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px dotted #093145;
+  -ms-grid-columns: 1fr 2.5fr;
+      grid-template-columns: 1fr 2.5fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px 40px;
+      grid-template-areas: ". ." ". ." ". .";
 }
 
 .home .home-container :nth-child(odd) {
   max-width: 100%;
   height: auto;
-  position: relative;
-}
-
-.home .home-container :nth-child(odd)::after {
-  content: "";
-  position: absolute;
-  background-color: #093145;
-  width: 1px;
-  height: 100%;
-  bottom: 0;
-  right: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home .home-container :nth-child(even) {
   width: 100%;
-  height: auto;
+  height: 100%;
+  vertical-align: middle;
   position: relative;
   text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home .home-container :nth-child(even)::before {
   content: "";
   position: absolute;
   background-color: #093145;
-  width: 1px;
+  width: 2px;
   height: 100%;
   bottom: 0;
   left: -20px;
+}
+
+.home .domaines-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+  border-bottom: 2px dotted #093145;
+}
+
+.home .domaines-container .domaines-list {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.home .domaines-container .domaines-list .domaine {
+  list-style-type: disc;
+}
+
+.home .domaines-container .domaines-list :nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home .values-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 200;
+  font-size: xx-large;
+  gap: 20px;
+  border-bottom: 2px dotted #093145;
+  padding-bottom: 20px;
+}
+
+.home .values-container :nth-child(1) {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.home .values-container :nth-child(2) {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.home .values-container :nth-child(3) {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.home .values-container :nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.home .values-container :nth-child(5) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.home .conviction {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-weight: bolder;
+  font-size: large;
+  font-style: italic;
+  text-align: center;
+}
+
+.home .conviction::before {
+  content: open-quote;
+}
+
+.home .conviction::after {
+  content: close-quote;
 }
 /*# sourceMappingURL=style.css.map */
