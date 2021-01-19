@@ -31,6 +31,16 @@
         </div>
 				<h2 class="titles">Mes domaines d'excellence</h2>
 				<div class="domaines-container">
+					<!--
+						<svg class="svg" width="800px" height="400px">
+						<line x1="1" y1="100" x2="1" y2="200" stroke="#093145" stroke-width="2" />
+						<line x1="1" y1="200" x2="100" y2="200" stroke="#093145" stroke-width="2" />
+						<line x1="1" y1="200" x2="1" y2="300" stroke="#093145" stroke-width="2" />
+						<text x="0" y="99" class="svg-text">
+							Accompagner les équipes dirigeantes, leurs organisations dans les périodes de transformation.
+						</text>
+					</svg>
+					-->
 					<ul class="domaines-list">
 						<li class="domaine">Accompagner les équipes dirigeantes, leurs organisations dans les périodes de transformation.</li>
 						<li class="domaine">Conduire et animer le changement avec pragmatisme.</li>
