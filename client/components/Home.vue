@@ -1,13 +1,10 @@
 <template>
     <div class="home">
         <img src="../assets/img/profile-photo.jpg" alt="photo-profil" class="home-item profile-photo">
-				<div class="jrg-container">
-					<div class="item-img">
-							<img class="item" src="../assets/img/logo.png" alt="logo">
-						</div>
-            <p class="item">
-                Depuis 4 ans, Président fondateur de JRG Consulting, société de conseil et audit dans l’accompagnement des équipes dirigeantes dans la transformation de leurs organisations et la prévention des conflits grâce aux techniques de la médiation.
-            </p>
+				<div class="jrg-container top-left-corner bottom-right-corner">
+					<p class="item">
+							Depuis 4 ans, Président fondateur de JRG Consulting, société de conseil et audit dans l’accompagnement des équipes dirigeantes dans la transformation de leurs organisations et la prévention des conflits grâce aux techniques de la médiation.
+					</p>
 				</div>
 				<h2 class="titles">Mon expérience</h2>
         <div class="home-container">

@@ -59,7 +59,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	flex-direction: column;
-	width: 75%;
+	width: 80%;
 	gap: 20px;
 	.profile-photo {
 		display: flex;
@@ -72,6 +72,117 @@ body {
 		font-weight: 300;
 		font-size: x-large;
 	}
+
+	.jrg-container {
+		display: flex;
+		align-items: center;
+		border: 2px solid $darkBlue;
+		padding: 15px;
+		position: relative;
+		width: auto;
+		text-align: justify;
+		p {
+			position: relative;
+			display: block;
+			margin: 0;
+			padding: 0;
+			z-index: 5;
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background: #fafafa;
+		}
+		&::before {
+			width: calc(100% + 50px + 4px - 200px);
+			height: calc(60%);
+			top: -2px;
+			right: -2px;
+			z-index: 1;
+		}
+		&::after {
+			height: calc(60%);
+			width: calc(100% + 50px + 4px - 200px);
+			left: -2px;
+			bottom: -2px;
+			z-index: 1;
+		}
+		/*
+		&::before {
+			width: calc(100% + 50px + 4px - 250px);
+			height: calc(100% + 4px);
+			top: -2px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+		&::after {
+			height: calc(100% + 50px + 4px - 110px);
+			width: calc(100% + 4px);
+			left: -2px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+		*/
+	}
+
+	/*
+	.jrg-container {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: justify;
+		position: relative;
+		border: 2px dotted $darkBlue;
+		padding: 15px;
+	}
+	
+	.top-left-corner {
+		padding-top: 15px;
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: $darkBlue;
+			width: 80px;
+			height: 2px;
+			top: 0;
+			left: -15px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $darkBlue;
+			width: 2px;
+			height: 30px;
+			top: 0;
+			left: -15px;
+		}
+	}
+	.bottom-right-corner p {
+		padding-bottom: 15px;
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: $darkBlue;
+			width: 80px;
+			height: 2px;
+			bottom: 0;
+			right: -15px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $darkBlue;
+			width: 2px;
+			height: 30px;
+			bottom: 0;
+			right: -15px;
+		}
+	}
+	*/
+	/*
 	.jrg-container {
 		display: grid;
 		align-items: center;
@@ -107,6 +218,7 @@ body {
 			}
 		}
 	}
+	*/
 	.home-container {
 		display: grid;
 		align-items: center;
