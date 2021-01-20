@@ -3,7 +3,8 @@ const { route } = require('../app.js')
 const router = express.Router()
 const bcrypt = require('bcrypt')
 const { Client } = require('pg')
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
+const sendmail = require('sendmail')()
 
 router.post('/email', async (req, res) => {
   const fullname = req.body.fullname
@@ -11,20 +12,19 @@ router.post('/email', async (req, res) => {
   const subject = req.subject
   const text = req.text
   const transporter = nodemailer.createTransport({
-    sendMail: true,
+    sendmail: true,
     newline: 'windows',
-    logger: false,
-    port: 995
+    path: ''
   })
   const result = await transporter.sendMail({
     from: 'test@gmail.com',
-    to: 'alexis.lecuyer@efrei.net',
+    to: 'alexis.lecuyer@noos.fr',
     subject: 'test',
     text: 'test'
   }, (err) => {
       console.log(err)
   })
-  res.json({ message: 'Email envoyé !' })
+  res.json({ message: 'Done !' })
 })
 
 module.exports = router
