@@ -22,6 +22,7 @@ var app = new Vue({
 			const email = message.email
 			const subject = message.subject
 			const text = message.text
+			console.log(fullname + " " + email + " " + subject + " " + text)
 			await axios.post('/api/email', 'fullname=' + fullname + '&email=' + email + '&subject=' + subject + '&text=' + text)
 		}
 	}
